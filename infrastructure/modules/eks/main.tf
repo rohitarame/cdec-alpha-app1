@@ -37,8 +37,13 @@ data "aws_eks_cluster_versions" "available" {
 # CloudWatch Logs — control plane logs (api, audit, authenticator, etc.)
 # -----------------------------------------------------------------------------
 
+resource "random_string" "random" {
+  length  = 4
+  special = false
+}
+
 resource "aws_cloudwatch_log_group" "cluster" {
-  name              = "/aws/eks/${var.cluster_name}/cluster"
+  name              = "/aws/eks/${var.cluster_name}/cluster-${random_string.random.result}"
   retention_in_days = 30
 
   tags = merge(

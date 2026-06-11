@@ -9,7 +9,7 @@ check "acm_certificate_with_aliases" {
 
 locals {
   name_prefix             = var.name_prefix != null ? var.name_prefix : "${var.application}-${var.environment}"
-  bucket_name             = coalesce(var.bucket_name, "${local.name_prefix}-frontend")
+  bucket_name             = coalesce(var.bucket_name, "${local.name_prefix}-frontend-2027")
   default_cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
   base_tags = merge(
     {

@@ -6,7 +6,7 @@ spring:
     name: course-service
   data:
     mongodb:
-      uri: ${MONGO_URI:mongodb+srv://cloudblitz:redhat123@cloudblitz-cluster.0xef32k.mongodb.net/cb_auth?retryWrites=true&w=majority&appName=cdec-dev}
+      uri: ${MONGO_URI:mongodb+srv:mongodb+srv://rohitarame8:Z1Ow8hMGHxnWTR9o@cluster22.pnzm7sy.mongodb.net/?appName=Cluster22}
 
 logging:
   level:
